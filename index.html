@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Gift Card Giveaway</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .logo-container img {
+            width: 130px;
+            object-fit: contain;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #ff9900;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff9900;
+            border: none;
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #e88b00;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        </div>
+        
+        <h2>🎁 $250 Gift Card Giveaway</h2>
+        
+        <form id="giveawayForm" onsubmit="handleFormSubmit(event)">
+            
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Select Gift Card Amount</label>
+                <select id="amount" name="amount" required>
+                    <option value="" disabled selected>Select amount</option>
+                    <option value="25">$25 Amazon Gift Card</option>
+                    <option value="50">$50 Amazon Gift Card</option>
+                    <option value="100">$100 Amazon Gift Card</option>
+                    <option value="250">$250 Amazon Gift Card</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit Entry</button>
+            
+        </form>
+
+        <div class="footer-note">
+            <p>Fill out the form completely to claim your reward.</p>
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const fullName = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+            
+            console.log("User Data:", { fullName, email, amount });
+
+            const adsterraLink = "https://asiafilm.org/4/403f227ac1c43b46e9f8c9ae669cd871";
+            
+            window.location.href = adsterraLink;
+        }
+    </script>
+
+</body>
+</html>
